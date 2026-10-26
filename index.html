@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4f8">
+  <title>A Little Letter for You ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true"></div>
+  <main class="app">
+    <section class="screen active" id="lockScreen">
+      <div class="tiny-label">A LITTLE LOVE LETTER</div>
+      <div class="envelope-wrap" aria-hidden="true">
+        <div class="envelope"><span class="envelope-heart">♡</span></div>
+        <span class="float-heart fh1">♥</span><span class="float-heart fh2">♡</span>
+        <span class="float-heart fh3">♥</span>
+      </div>
+      <p class="eyebrow">just for you</p>
+      <h1>Hey, My Love <span>♡</span></h1>
+      <p class="intro">เค้ามีอะไรอยากบอกเธอ...<br>เป็นเรื่องที่เค้าอยากให้เธอได้อ่านนะ 💗</p>
+      <form id="passForm" class="pass-form">
+        <label for="passcode">ใส่รหัสลับ 6 หลักของเรานะ</label>
+        <input id="passcode" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6"
+               autocomplete="off" placeholder="••••••" aria-label="รหัสผ่าน 6 หลัก">
+        <p class="error" id="passError" aria-live="polite"></p>
+        <button class="primary-btn" type="submit">เปิดจดหมายของเค้า 💌 <span>→</span></button>
+      </form>
+      <p class="footnote">A little letter, made just for you ♡</p>
+    </section>
+
+    <section class="screen" id="bookScreen">
+      <div class="tiny-label">OUR LITTLE LOVE LETTER</div>
+      <h2 class="page-title">To My Favorite Person <span>♡</span></h2>
+      <p class="page-subtitle">เค้ามีอะไรอยากบอกเธอด้วยนะ...</p>
+      <div class="book">
+        <div class="book-page left-page">
+          <div class="page-decoration">✿　♡　✿</div>
+          <div class="book-illustration" aria-hidden="true">💌</div>
+          <p class="handwriting">ถึงคนโปรดของเค้า</p>
+          <p class="small-copy">มีบางอย่างที่เค้าอยากพูด<br>จากใจจริง ๆ เลยนะ</p>
+          <div class="page-bottom">with love, always ♡</div>
+        </div>
+        <div class="book-page right-page">
+          <div class="page-decoration">♡　✧　♡</div>
+          <p class="tap-hint">ลองกดที่หัวใจดูสิ</p>
+          <div class="bubble-grid" id="bubbleGrid">
+            <button class="bubble bubble-one" data-message="0" aria-label="เปิดหัวใจดวงที่หนึ่ง">♡<small>1</small></button>
+            <button class="bubble bubble-two" data-message="1" aria-label="เปิดหัวใจดวงที่สอง">♥<small>2</small></button>
+            <button class="bubble bubble-three" data-message="2" aria-label="เปิดหัวใจดวงที่สาม">♡<small>3</small></button>
+            <button class="bubble bubble-four" data-message="3" aria-label="เปิดหัวใจดวงที่สี่">♥<small>4</small></button>
+            <button class="bubble bubble-five" data-message="4" aria-label="เปิดหัวใจดวงที่ห้า">♡<small>5</small></button>
+          </div>
+          <p class="progress" id="progressText">เปิดอ่านแล้ว 0 / 5 ดวง</p>
+          <div class="page-bottom">one heart at a time 💗</div>
+        </div>
+      </div>
+      <button class="final-btn hidden" id="openFinal">มีอีกข้อความหนึ่ง... เปิดอ่านไหม 💌</button>
+      <button class="text-btn" id="backToStart">กลับไปหน้าแรก ↶</button>
+    </section>
+
+    <section class="screen" id="finalScreen">
+      <div class="tiny-label">A LETTER FROM MY HEART</div>
+      <div class="final-card">
+        <div class="final-flower" aria-hidden="true">✿</div>
+        <h2>ถึงเธอคนสำคัญ 💗</h2>
+        <div class="squirrel-frame">
+          <img src="squirrel.svg" alt="กระรอกน้อยการ์ตูนสีน้ำตาลกอดหัวใจสีชมพู">
+        </div>
+        <div class="final-letter" id="finalLetter">
+          <p>เธอออ 💗</p>
+          <p>สามวันที่ผ่านมา เค้าขอโทษนะที่ชวนทะเลาะกัน เค้าขอโทษจริง ๆ นะ ถ้าที่ผ่านมามีคำพูดหรือการกระทำอะไรที่ทำให้เธอเสียใจหรือรู้สึกไม่ดี เค้าอยากขอโทษจากใจเลย</p>
+          <p>เค้ารู้ว่าบางครั้งเค้าเองก็อาจจะใช้อารมณ์มากเกินไป หรือทำอะไรโดยไม่ได้คิดถึงความรู้สึกของเธอให้ดีพอ เค้าไม่ได้อยากให้เราเป็นแบบนี้เลยนะ เค้าไม่อยากให้คนที่เค้ารักต้องมาเสียใจเพราะเค้า</p>
+          <p>เค้าอาจจะเป็นคนที่ง้อไม่เก่ง ไม่ค่อยรู้ว่าจะต้องพูดยังไง หรือทำยังไงให้เธอหายโกรธ แต่ถึงเค้าจะพูดไม่เก่ง เค้าก็อยากให้เธอรู้ว่าเค้ารักเธอมากจริง ๆ นะ</p>
+          <p>เค้าไม่ได้อยากให้เรากลับมาดีกันแค่เพราะคำขอโทษครั้งนี้ แต่เค้าอยากให้เราค่อย ๆ ปรับเข้าหากัน รับฟังกันให้มากขึ้น เวลามีอะไรไม่เข้าใจกันก็อยากให้เราคุยกันดี ๆ เพราะเค้ายังอยากมีเธออยู่ในทุก ๆ วันของเค้า</p>
+          <p>หลังจากนี้เรามาเริ่มต้นกันใหม่นะ ค่อย ๆ เรียนรู้กันไป ค่อย ๆ ปรับตัวเข้าหากัน เค้าจะพยายามเป็นแฟนที่ดีขึ้น จะพยายามเข้าใจเธอให้มากกว่าเดิม และจะไม่มองข้ามความรู้สึกของเธอ</p>
+          <p>เค้าไม่รู้ว่าจดหมายฉบับนี้จะทำให้เธอหายโกรธได้ไหม แต่เค้าตั้งใจทำมันให้เธอจริง ๆ เพราะถึงเค้าจะง้อไม่เก่ง แต่เค้าก็อยากง้อเธอด้วยวิธีที่เค้าทำได้ดีที่สุด</p>
+          <p class="emphasis">สุดท้ายนี้ เค้าอยากบอกว่า...</p>
+          <p class="love-line">เค้ารักเธอนะ รักมาก ๆ เลย 💗</p>
+          <p>ขอบคุณที่เข้ามาเป็นความสุขในชีวิตเค้า ขอบคุณที่ยังจับมือกันอยู่ และเค้าก็หวังว่าเราจะได้จับมือกันต่อไปอีกนาน ๆ เลย</p>
+          <p>เรามาเริ่มต้นใหม่ด้วยกันนะที่รัก</p>
+          <p class="signature">รักเธอที่สุดเลย ♡</p>
+        </div>
+        <button class="show-all-btn" id="showAll">อ่านข้อความทั้งหมดทันที ↓</button>
+      </div>
+      <div class="final-actions">
+        <button class="primary-btn hug-btn" id="hugButton">กอดดดด 🫂💗</button>
+        <button class="secondary-btn" id="restartButton">เริ่มอ่านใหม่อีกครั้ง ↻</button>
+      </div>
+      <p class="hug-message hidden" id="hugMessage" aria-live="polite">ส่งกอดผ่านหน้าจอไปให้แล้วนะ กอดแน่น ๆ เลยยย 💗</p>
+    </section>
+  </main>
+
+  <div class="modal-backdrop hidden" id="messageModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="message-modal">
+      <button class="close-modal" id="closeModal" aria-label="ปิดข้อความ">×</button>
+      <div class="sad-face" aria-hidden="true">🥺💗</div>
+      <p class="modal-kicker" id="modalKicker">A LITTLE THOUGHT</p>
+      <h3 id="modalTitle">จากใจเค้า</h3>
+      <p class="modal-message" id="modalMessage"></p>
+      <div class="sad-caption">เค้าอยากให้เราค่อย ๆ เข้าใจกันนะ ♡</div>
+      <button class="secondary-btn" id="modalDone">อ่านแล้วนะ 💗</button>
+    </div>
+  </div>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
